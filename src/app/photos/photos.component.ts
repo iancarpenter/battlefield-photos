@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotosComponent implements OnInit {
 
+  nameOfBattlefield: string;
+
   constructor() { }
 
   ngOnInit() {
