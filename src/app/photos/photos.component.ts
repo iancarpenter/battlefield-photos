@@ -19,15 +19,15 @@ export class PhotosComponent implements OnInit {
               private photoService: PhotoService) { }
 
   ngOnInit() {
-    const paramName: string = 'name';
+    const paramName = 'name';
 
     this.route.params
     .subscribe(
       (params: Params) => {
         this.battlefield = params[paramName];
-        console.log('the battlefield is: ' + this.battlefield  );
         this.photo = this.photoService.getPhotoByName(this.battlefield);
         console.log('value returned from getPhotoByName is ' + this.photo.name);
+        console.log('value returned from getPhotoByName is ' + this.photo.imagePath);
       }
     );
   }

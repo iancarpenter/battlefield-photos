@@ -7,12 +7,18 @@ import { Photo } from './photo.model';
 export class PhotoService {
 
   private photos: Photo[] = [
-    new Photo('Bray-Dunes',
-      'A photo from Bray-Dune',
-      '../assets/cl4.jpg'),
-    new Photo('Cassel',
+    new Photo('bray-dunes',
+      // tslint:disable-next-line:max-line-length
+      'Bray-Dunes was one of the beaches used during Dunkirk evacuation. It’s iconic sand dunes feature in many photos taken during this time.',
+      ['../assets/5dune2t.jpg',
+       '../assets/5dune2t.jpg',
+       '../assets/5dune2t.jpg',
+       '../assets/5dune2n.jpg', 
+       '../assets/5dune3n.jpg', 
+       '../assets/5dune4n.jpg']),
+    new Photo('cassel',
       'A photo from the town of Cassel',
-      '../assets/5dune2.jpg'),
+      ['../assets/cl4.jpg']),
   ];
 
   constructor() { }
@@ -27,7 +33,11 @@ export class PhotoService {
   }
 
   getPhotoByName(name: string) {
-    return this.getPhotos().find(x => x.name === name);
+    return this.getPhotos().find(x => {
+      return x.name === name;
+    });
+    // return this.getPhotos().filter(x => x.name === name);
+
   }
 
 }
