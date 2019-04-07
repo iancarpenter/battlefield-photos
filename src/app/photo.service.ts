@@ -17,7 +17,7 @@ export class PhotoService {
     new Photo('Cassel',
       // tslint:disable-next-line:max-line-length
       'The photos show the very picturesque town taken in 2012 which include a heavily scared building, a plaque to the Gloucesters and the Ox and Bucks and finally views of the hill showing the commanding position of the town against the surrounding countryside.',
-      ['../assets/cl4t1.jpg', 
+      ['../assets/cl4t1.jpg',
        '../assets/cl4t2.jpg',
        '../assets/cl4t3.jpg'
       ]),
