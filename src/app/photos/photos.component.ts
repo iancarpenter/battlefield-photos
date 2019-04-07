@@ -11,7 +11,6 @@ import { PhotoService } from '../photo.service';
 export class PhotosComponent implements OnInit {
   battlefield: string;
 
-  // photos: Photo[];
   photo: Photo;
 
 

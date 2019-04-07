@@ -1,12 +1,8 @@
 <div class="container">
-  <div id="battlefieldName">
+  <div id="battlefieldName" class="row">
     <h1>Photos from {{ photo.name }}</h1>
+    <p>{{ photo.description }}</p>
+    <div *ngFor="let image of photo.imagePath let i = index" class="d-flex justify-content-around col-sm m-3">      
+      <img src="{{ photo.imagePath[i] }}" alt="" class="rounded">
+    </div>
   </div>
-  <div class="row">
-    <div>      
-      <h2>{{ photo.description }}</h2>
-      <h3 *ngFor="let image of photo.imagePath let i = index">
-        <img src="{{ photo.imagePath[i] }}" alt="">        
-      </h3>
-    </div>    
-</div>
